@@ -14,8 +14,8 @@ cropped = resized[50:400, 100:650]
 
 # Rotate the cropped image
 h, w = cropped.shape[:2]
-center = (w // 2, h // 2)
-matrix = cv2.getRotationMatrix2D(center, 310, 1)  # Rotation by 310 degrees around the center
+center = (w // 2, h // 2) # set the center point to have coordinates of half of w and h
+matrix = cv2.getRotationMatrix2D(center, 310, 1)  # Rotation by 310 degrees anti-clockwise around the center
 rotated = cv2.warpAffine(cropped, matrix, (w, h))
 
 # Convert to HSV color space
@@ -23,6 +23,12 @@ hsv = cv2.cvtColor(rotated, cv2.COLOR_BGR2HSV)  # Warning: extremely disturbing 
 
 # Draw a white line
 cv2.line(hsv, (100, 200), (300, 200), (255, 255, 255), 7)
+
+# Draw a circle
+cv2.circle(hsv,(290,170),60, (255,0,0),7)
+
+# Draw a rectangle
+cv2.rectangle(hsv,(0,0),(200,200), (255,255,0),7)
 
 # Define font for the text
 font = cv2.FONT_HERSHEY_SCRIPT_SIMPLEX
