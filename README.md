@@ -1,10 +1,10 @@
 # OpenCV-Journal-Part-1
 
-### lab1 ###
+## lab1 ##
 Successfully installed OpenCV using pip alongside Python 3. Created a virtual environment to isolate and manage Python packages specific to this project. The virtual environment appears to restrict or complicate interactions with cloud services like GitHub, but I was able to push changes after terminating the virtual environment.
 
 
-### lab2 ###
+## lab2 ##
 Color images use multiple color channels to represent color; grayscale images use only one channel ranging from black to white. The definition of a grayscale imgae is quite literally, 50 (or more) shades of gray.
 
 Jokes aside, I found the conversion from colorful to grayscale quite interesting. The typical conversion process eliminates the hue and saturation from a pixel while maintaining its luminance (fancy word!). 
@@ -13,7 +13,7 @@ Another interesting fact I discovered researching about RGB and grayscales, is t
 Grayscale images are often used in edge detecting, thresholding, feature extractions and so on. It is simpler and faster to perform Computer Vision processes on a grayscale image than a color image. 
 
 
-### lab3 ###
+## lab3 ##
 ```cv2.rectangle (image, (x1, y1), (x2, y2), (color), thickness)```
 ```cv2.circle (image, (center x, center y), radius, (color), thickness)```
 ```cv2.putText(image, ‘text’, (x, y), font, fontScale, (color), thickness)```
@@ -30,7 +30,7 @@ Value - brightness. 0%(black) or 0 - 100% or 255(brightest, or white)
 I'd imagine HSV would be useful in color filtering.
 
 
-### lab4 ###
+## lab4 ##
 
 I was playing with and researching about the parameters of cv2.cornerHarris(), SIFT and FLANN. Here's the interesting findings:
 
@@ -52,7 +52,7 @@ Matching
 distance ratio is typically <0.7 to filter reliable matches
 
 
-### lab5 ###
+## lab5 ##
 Histograms: graphical representation of the distribution of pixel intensities (ranging from 0 to 255) across an image. This should be useful analyzing color distribution in image processing,.
 Channels: to my suprise, each primary color channel (red, green, blue) is analyzed separately. Note that the primary color channels are based on light, not the red, yellow blue based on traditional coloring.
 Bins: Set to 256, guaranteed to represent every possible pixel value from 0 to 255. Each pixel can take in an 8-bit image.
@@ -60,7 +60,7 @@ Grayscale historgram only has one channel representing light intensity from 0 to
 Good recap to use the Matplotlib.
 
 
-### lab6 ###
+## lab6 ##
 Gaussian blur:
 ```cv2.GaussianBlur(input img, (ksize), sigmaX)```
 Gaussian blur is a method where a bell-shaped curve is used to calculate the weights assigned to neighboring pixels.
