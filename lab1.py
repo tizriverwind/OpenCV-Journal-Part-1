@@ -1,0 +1,1 @@
+# Setting up Python3, Open CV library and virtual environment. There wasnt any actual code
